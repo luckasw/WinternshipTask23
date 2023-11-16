@@ -4,21 +4,21 @@ public class Changes {
     private final UUID matchId;
     private final UUID playerId;
     private final long balanceChange;
-    private boolean isRollbacked;
+    private boolean isRolledback;
 
     public Changes(UUID playerId, long balanceChange, UUID matchId) {
         this.playerId = playerId;
         this.balanceChange = balanceChange;
         this.matchId = matchId;
-        this.isRollbacked = false;
+        this.isRolledback = false;
     }
 
-    public void setRollbacked(boolean rollbacked) {
-        isRollbacked = rollbacked;
+    public void setRolledback(boolean rollbacked) {
+        isRolledback = rollbacked;
     }
 
-    public UUID getMatchId() {
-        return matchId;
+    public boolean isRolledback() {
+        return isRolledback;
     }
 
     public UUID getPlayerId() {
@@ -27,10 +27,6 @@ public class Changes {
 
     public long getBalanceChange() {
         return balanceChange;
-    }
-
-    public boolean isRollbacked() {
-        return isRollbacked;
     }
 
     public String toString(){

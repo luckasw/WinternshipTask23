@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class Casino {
     private long balance;
-    private List<Changes> changes;
+    private final List<Changes> changes;
 
     public Casino(long balance) {
         this.balance = balance;
@@ -15,26 +15,22 @@ public class Casino {
         return this.balance;
     }
 
-    public void setBalance(long balance) {
-        this.balance = balance;
-    }
-
     public void addBalance(long amount) {
         this.balance += amount;
+    }
+    public void subtractBalance(long amount) {
+        this.balance -= amount;
     }
 
     public void addChanges(Changes change) {
         this.changes.add(change);
     }
 
-    public List<Changes> getChanges() {
-        return this.changes;
-    }
-
     public void rollbackIllegitimateChanges(UUID playerId) {
         for (Changes change : this.changes) {
-            if (change.getPlayerId().equals(playerId) && !change.isRollbacked()) {
+            if (change.getPlayerId().equals(playerId) && !change.isRolledback()) {
                 this.balance -= change.getBalanceChange();
+                change.setRolledback(true);
             }
         }
     }

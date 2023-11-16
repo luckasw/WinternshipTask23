@@ -21,7 +21,7 @@ public class Main {
             Player player = getPlayerById(action.getPlayerId(), players);
             final int coinNumber = action.getCoinAmount();
             if (player == null) {
-                if (action.getActionType().equals("DEPOSIT")) { // enum would be better
+                if (action.getActionType().equals(ActionType.DEPOSIT)) {
                     player = new Player(action.getPlayerId(), coinNumber, true);
                     players.add(player);
                 } else {
@@ -31,7 +31,7 @@ public class Main {
                 }
             } else if (player.isLegitimate()) {
                 switch (action.getActionType()) {
-                    case "BET" -> {
+                    case BET -> {
                         if (player.getBalance() < action.getCoinAmount()) {
                             illegitimateAction(action, player);
                         } else {
@@ -45,7 +45,7 @@ public class Main {
                                 int winAmount = (int) Math.round(coinNumber * match.getReturnRate(playerSide));
                                 player.setBalance(player.getBalance() + winAmount);
                                 player.calculateWinRate(true);
-                                casino.addBalance((winAmount) * -1L); // subtractBalance
+                                casino.subtractBalance((winAmount));
                                 casino.addChanges(new Changes(player.getId(), (winAmount) * -1L, match.getMatchId()));
                             } else if (match.getResult().equals("DRAW")) { // draw
                                 player.calculateWinRate(false);
@@ -59,14 +59,14 @@ public class Main {
                             match.setMatchEnded(true);
                         }
                     }
-                    case "WITHDRAW" -> {
+                    case WITHDRAW -> {
                         if (player.getBalance() < coinNumber) {
                             illegitimateAction(action, player);
                         } else {
                             player.setBalance(player.getBalance() - coinNumber);
                         }
                     }
-                    case "DEPOSIT" -> player.setBalance(player.getBalance() + coinNumber);
+                    case DEPOSIT -> player.setBalance(player.getBalance() + coinNumber);
                     default -> illegitimateAction(action, player);
                 }
             }
@@ -118,9 +118,9 @@ public class Main {
         return data;
     }
 
-    public static List<Match> readMatchData(final String fileName) {
+    public static List<Match> readMatchData(final String matchDataPath) {
         List<Match> matches = new ArrayList<>();
-        ArrayList<String> match_data = readFile(fileName);
+        ArrayList<String> match_data = readFile(matchDataPath);
         for (String match : match_data) {
             String[] matchSplit = match.split(",");
             matches.add(new Match(UUID.fromString(matchSplit[0]), Double.parseDouble(matchSplit[1]),
@@ -129,7 +129,7 @@ public class Main {
         return matches;
     }
 
-    private static List<Action> readPlayerData(String playerDataPath) {
+    private static List<Action> readPlayerData(final String playerDataPath) {
         ArrayList<String> player_data = readFile(playerDataPath);
         List<Action> actions = new ArrayList<>();
         for (String line : player_data) {
@@ -163,11 +163,6 @@ public class Main {
             }
             writer.newLine();
             writer.write(String.valueOf(casino.getBalance()));
-            //writer.newLine();
-            //for (Changes changes : casino.getChanges()) {
-            //    writer.write(changes.toString());
-            //    writer.newLine();
-            //}
             writer.close();
         } catch (Exception e) {
             System.out.println("Error writing to file: " + e.getMessage());

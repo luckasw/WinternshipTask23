@@ -1,7 +1,7 @@
 import java.util.UUID;
 
 public class Action {
-    private final String actionType;
+    private final ActionType actionType;
     private final UUID playerId;
     private final int coinAmount;
     private final UUID matchId;
@@ -9,7 +9,7 @@ public class Action {
 
     public Action(UUID playerId, String actionType, UUID matchId, int coinAmount, String playerSide) {
         this.playerId = playerId;
-        this.actionType = actionType;
+        this.actionType = convertActionType(actionType);
         this.matchId = matchId;
         this.coinAmount = coinAmount;
         this.playerSide = playerSide;
@@ -17,13 +17,22 @@ public class Action {
 
     public Action(UUID playerId, String actionType, int coinAmount) {
         this.playerId = playerId;
-        this.actionType = actionType;
+        this.actionType = convertActionType(actionType);
         this.matchId = null;
         this.coinAmount = coinAmount;
         this.playerSide = null;
     }
 
-    public String getActionType() {
+    private ActionType convertActionType(String actionType) {
+        return switch (actionType) {
+            case "BET" -> ActionType.BET;
+            case "DEPOSIT" -> ActionType.DEPOSIT;
+            case "WITHDRAW" -> ActionType.WITHDRAW;
+            default -> null;
+        };
+    }
+
+    public ActionType getActionType() {
         return actionType;
     }
 
