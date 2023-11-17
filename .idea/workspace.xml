@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="205be6de-2326-4987-bad6-9b294f4e06fa" name="Changes" comment="Added ActionType enum">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ActionType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Casino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Casino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Changes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Changes.java" afterDir="false" />
+    <list default="true" id="205be6de-2326-4987-bad6-9b294f4e06fa" name="Changes" comment="Added ActionType enum, casino subtractBalance">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ActionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Initialize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +26,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "luckasw"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9bd58bd7-4ea2-4418-ba0e-243d5f48756b" />
+        <option name="url" value="https://github.com/luckasw/WinternshipTask23" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 8
@@ -70,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700152928186</updated>
-      <workItem from="1700152929318" duration="1873000" />
+      <workItem from="1700152929318" duration="6668000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -88,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700153162479</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added ActionType enum, casino subtractBalance">
+      <option name="closed" value="true" />
+      <created>1700157149423</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700157149423</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +117,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Winternship task" />
     <MESSAGE value="Added ActionType enum" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ActionType enum" />
+    <MESSAGE value="Added ActionType enum, casino subtractBalance" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ActionType enum, casino subtractBalance" />
   </component>
 </project>

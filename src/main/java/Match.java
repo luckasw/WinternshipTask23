@@ -27,14 +27,6 @@ public class Match {
         return matchId;
     }
 
-    public double getReturnRateA() {
-        return returnRateA;
-    }
-
-    public double getReturnRateB() {
-        return returnRateB;
-    }
-
     public String getResult() {
         return result;
     }
