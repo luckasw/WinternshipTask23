@@ -1,14 +1,16 @@
+package objects;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 public class Casino {
     private long balance;
-    private final List<Changes> changes;
+    private final List<Transaction> transactions;
 
     public Casino(long balance) {
         this.balance = balance;
-        this.changes = new ArrayList<>();
+        this.transactions = new ArrayList<>();
     }
 
     public long getBalance() {
@@ -22,12 +24,12 @@ public class Casino {
         this.balance -= amount;
     }
 
-    public void addChanges(Changes change) {
-        this.changes.add(change);
+    public void addChanges(Transaction change) {
+        this.transactions.add(change);
     }
 
     public void rollbackIllegitimateChanges(UUID playerId) {
-        for (Changes change : this.changes) {
+        for (Transaction change : this.transactions) {
             if (change.getPlayerId().equals(playerId) && !change.isRolledback()) {
                 this.balance -= change.getBalanceChange();
                 change.setRolledback(true);

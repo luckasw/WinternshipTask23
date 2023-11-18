@@ -1,3 +1,7 @@
+package objects;
+
+import enums.ActionType;
+
 import java.util.UUID;
 
 public class Action {

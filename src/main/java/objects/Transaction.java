@@ -1,12 +1,14 @@
+package objects;
+
 import java.util.UUID;
 
-public class Changes {
+public class Transaction {
     private final UUID matchId;
     private final UUID playerId;
     private final long balanceChange;
     private boolean isRolledback;
 
-    public Changes(UUID playerId, long balanceChange, UUID matchId) {
+    public Transaction(UUID playerId, long balanceChange, UUID matchId) {
         this.playerId = playerId;
         this.balanceChange = balanceChange;
         this.matchId = matchId;

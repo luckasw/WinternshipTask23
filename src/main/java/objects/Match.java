@@ -1,3 +1,5 @@
+package objects;
+
 import java.util.UUID;
 
 public class Match {

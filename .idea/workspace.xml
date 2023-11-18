@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="205be6de-2326-4987-bad6-9b294f4e06fa" name="Changes" comment="Added ActionType enum, casino subtractBalance">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ActionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Initialize.java" afterDir="false" />
+    <list default="true" id="205be6de-2326-4987-bad6-9b294f4e06fa" name="Changes" comment="Refactoring">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/result.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ActionHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/objects/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ActionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ActionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ActionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/enums/ActionType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Casino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/objects/Casino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Changes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/objects/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Initialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Initialize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/objects/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/objects/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -41,6 +57,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 8
 }]]></component>
@@ -54,16 +73,21 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/aw/IdeaProjects/WinternshipTask23/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2615193",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -72,6 +96,29 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ActionHandlerTest.testHandleActionNullPlayerBet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WinternshipTask23" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ActionHandlerTest" />
+      <option name="METHOD_NAME" value="testHandleActionNullPlayerBet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ActionHandlerTest.testHandleActionNullPlayerBet" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -81,7 +128,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700152928186</updated>
-      <workItem from="1700152929318" duration="6668000" />
+      <workItem from="1700152929318" duration="12963000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -107,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700157149423</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactoring">
+      <option name="closed" value="true" />
+      <created>1700248135650</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700248135650</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +173,7 @@
     <MESSAGE value="Winternship task" />
     <MESSAGE value="Added ActionType enum" />
     <MESSAGE value="Added ActionType enum, casino subtractBalance" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ActionType enum, casino subtractBalance" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
 </project>

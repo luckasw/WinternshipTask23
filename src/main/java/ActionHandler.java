@@ -1,3 +1,6 @@
+import enums.ActionType;
+import objects.*;
+
 import java.util.List;
 import java.util.UUID;
 
@@ -75,12 +78,12 @@ public class ActionHandler {
         player.setBalance(player.getBalance() - coinNumber);
         player.calculateWinRate(false);
         casino.addBalance(coinNumber);
-        casino.addChanges(new Changes(player.getId(), coinNumber, match.getMatchId()));
+        casino.addChanges(new Transaction(player.getId(), coinNumber, match.getMatchId()));
     }
 
     private void handleDraw(Player player, Match match) {
         player.calculateWinRate(false);
-        casino.addChanges(new Changes(player.getId(), 0, match.getMatchId()));
+        casino.addChanges(new Transaction(player.getId(), 0, match.getMatchId()));
     }
 
     private void handleWin(Player player, int coinNumber, Match match, String playerSide) {
@@ -88,7 +91,7 @@ public class ActionHandler {
         player.setBalance(player.getBalance() + winAmount);
         player.calculateWinRate(true);
         casino.subtractBalance((winAmount));
-        casino.addChanges(new Changes(player.getId(), (winAmount) * -1L, match.getMatchId()));
+        casino.addChanges(new Transaction(player.getId(), (winAmount) * -1L, match.getMatchId()));
     }
 
     private void handleNullPlayer(Action action) {
